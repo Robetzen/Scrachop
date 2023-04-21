@@ -4,9 +4,21 @@
     <title>Titulares de noticias</title>
 </head>
 <body>
+    <form action="{{ url_for('index') }}" method="get">
+        <label for="url">url</label>
+        <br>
+        <input type="text" name="url" id="">
+        <br>
+        <label for="key_word">Key word</label>
+        <br>
+        <input type="text" name="key_word" id="">
+        <button>scrap</button>
+    </form>
+
     <h1>Titulares de noticias</h1>
     {% for headline in headlines %}
         <h3>{{ headline.text }}</h3>
     {% endfor %}
+
 </body>
 </html>
