@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 
  
-@app.route('/')  
+@app.post('/')  
 def index():
   page = requests.get('https://www.bbc.com/news')
   soup = BeautifulSoup(page.content, 'html.parser')
